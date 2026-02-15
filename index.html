@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAIN Roleplay</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+</head>
+
+<body>
+
+    <div class="background"></div>
+
+    <header class="fade-in">
+        <img src="assets/logo.png" alt="MAIN Logo" class="logo">
+        <h1 class="glow">MULTI ANIME INTERACTION NETWORK</h1>
+        <p>A Fan-Based Anime Roleplay Community</p>
+        <a href="#rules" class="btn">Read Rules</a>
+        <a href="#register" class="btn secondary">Register Character</a>
+    </header>
+
+    <button onclick="login()" class="btn secondary">Login</button>
+
+    <section id="rules" class="fade-in">
+        <h2>Community Rules</h2>
+        <ul>
+            <li>No promotion or selling.</li>
+            <li>Intro wajib 24 jam.</li>
+            <li>Gunakan karakter anime (tidak boleh sama).</li>
+            <li>No toxic berlebihan.</li>
+            <li>Wajib aktif & ikut nimbrung.</li>
+        </ul>
+    </section>
+
+    <section id="register" class="fade-in">
+        <h2>Register Your Character</h2>
+
+        <input type="text" id="charName" placeholder="Character Name">
+        <input type="text" id="animeOrigin" placeholder="Anime Origin">
+        <button onclick="addCharacter()" class="btn">Add Character</button>
+
+        <div id="characterList"></div>
+    </section>
+
+    <section id="join" class="fade-in">
+        <h2>Join MAIN</h2>
+        <a href="https://chat.whatsapp.com/KUM2Li8pvvU5KWb97BmpvM" target="_blank" class="btn">Join Group</a>
+    </section>
+
+    <audio id="bgMusic" loop autoplay>
+        <source src="assets/music.mp3" type="audio/mp3">
+    </audio>
+    <button class="music-btn" onclick="toggleMusic()">🎀 Music</button>
+    <button onclick="toggleMusic()" class="btn">🎵 Music</button>
+    <button onclick="toggleTheme()" class="btn">🌙 Theme</button>
+
+    <footer>
+        <p>MAIN © 2026 | Fan-Based Roleplay Community</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <div id="particles-js"></div>
+
+    <script>
+        particlesJS("particles-js", {
+            particles: {
+                number: { value: 80 },
+                size: { value: 3 },
+                color: { value: "#ffffff" },
+                move: { speed: 2 },
+                line_linked: { enable: true }
+            }
+        });
+    </script>
+
+    <div class="cloud" style="width:120px;height:60px;top:20%;"></div>
+    <div class="cloud" style="width:180px;height:80px;top:50%;animation-duration:90s;"></div>
+
+</body>
+
+</html>
