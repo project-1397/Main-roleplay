@@ -1,0 +1,167 @@
+:root {
+  --primary: #AFCBFF;
+  --secondary: #DCEBFF;
+  --accent: #6EA8FF;
+  --background: #F5F9FF;
+  --text-dark: #2E3A59;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-dark);
+}
+
+/* ================= NAV ================= */
+nav {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-container img {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ================= HERO ================= */
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(180deg, var(--secondary), var(--primary));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: var(--accent);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #4f8fff;
+}
+
+/* ================= CHARACTERS ================= */
+.characters {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.characters h2 {
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+/* ================= STATUS ================= */
+.status-box {
+  background: var(--secondary);
+  padding: 40px;
+  text-align: center;
+  margin: 50px 8%;
+  border-radius: 20px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px) {
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+}
